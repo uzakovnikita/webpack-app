@@ -17,6 +17,7 @@
   ],
   "author": "uzakov nikita",
   "license": "ISC",
+  "browserslist": ">0.25%, not dead",
   "devDependencies": {
     "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
@@ -42,8 +43,10 @@
     "less": "^4.1.0",
     "less-loader": "^7.2.1",
     "cross-env": "^7.0.3",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "@babel/preset-env": "^7.12.11"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.12.1"
   }
 }

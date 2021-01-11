@@ -53,7 +53,7 @@ module.exports = {
     context: path.resolve(__dirname, "src"),
     mode: "development",
     entry: {
-        main: "./index.js",
+        main: ['@babel/polyfill', './index.js'] ,
         analytics: "./analytics.js",
     },
     output: {
@@ -123,6 +123,16 @@ module.exports = {
                 test: /\.s[ac]ss$/,
                 use: cssLoaders('sass-loader'),
             },
+            {
+                test: /\.js$/,
+                exclude: /node-modules/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                      presets: ['@babel/preset-env'] // соответствие стандартам по умолчанию в babel
+                    }
+                }
+            }
         ],
     },
 };
